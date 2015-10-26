@@ -1,0 +1,92 @@
+@import "ui-variables";
+@import "syntax-variables";
+
+.raml-console {
+  height: 100%;
+
+  .title {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-top: 0;
+    word-wrap: break-word;
+    color: @text-color-selected;
+
+    .title-btn {
+      float: right;
+      font-size: 0.55em;
+      padding: 0.2em 0.6em;
+      line-height: 1.5;
+    }
+
+    .title-small {
+      float: right;
+      font-size: 0.6em;
+    }
+  }
+
+  .sub-title {
+    font-size: 1.5em;
+    margin-top: 0;
+    line-height: 1.5;
+    border-bottom: 2px solid @background-color-highlight;
+  }
+
+  .nested-title {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  .block-tight {
+    margin-bottom: @component-padding / 2;
+  }
+
+  .title-nav {
+    font-size: 1.2em;
+    margin-top: 0;
+    word-break: break-all;
+  }
+
+  .title-meta {
+    margin-bottom: 1em;
+
+    .badge {
+      margin-bottom: 5px;
+    }
+  }
+
+  .children {
+    font-size: 1.2em;
+  }
+
+  select.form-control {
+    color: @text-color;
+    border-color: @button-border-color;
+    background-color: @button-background-color;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      background-color: @button-background-color-hover;
+    }
+  }
+
+  atom-text-editor:not([mini]) {
+    font-size: 1.25em;
+    line-height: 2em;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    max-height: 15em;
+  }
+}
+
+/**
+ * Override tooltip styles that aren't correct for me.
+ */
+.raml-console-tooltip {
+  max-width: 480px;
+  white-space: normal;
+}

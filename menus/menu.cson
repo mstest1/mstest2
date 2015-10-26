@@ -1,0 +1,81 @@
+'context-menu':
+    '.tree-view .file .name[data-name$=\\.raml]' : [{label: 'Open RAML Outline', command:  'raml-labs:todo'}]
+
+    '.tree-view .file .name[data-name$=\\.json]' : [{label: 'Generate TypeScript Interface from JSON Schema', command:  'raml-labs:totsinterface'}]
+
+    '.tree-view .file .name[data-name$=\\.md]' : [{label: 'Convert API Notebook to RAMLScript', command:  'raml-labs:toramlscript'}]
+
+    '.tree-view .file .name[data-name$=\\.raml]' : [{label: 'Generate TypeScript Client for RAML', command:  'raml-labs:toramlclient'}]
+
+    '.tree-view .file .name[data-name$=\\.ts]' : [{label: 'Run RAMLScript', command:  'raml-labs:launch'}, {label: 'Deploy RAMLScript', command:  'raml-labs:deploy'}]
+
+    'atom-text-editor[data-grammar="source raml"]': [{label: 'Go To Definition (RAML)', command:  'raml-labs:gotoDecl'}, {label: 'Rename RAML Element', command: 'raml-labs:rename'}, {label: 'Select current node', command:  'raml-labs:selectNode'},{label: 'Find usages', command:  'raml-labs:findUsages'}]
+'menu': [
+  {
+    'label': 'RAML'
+    'submenu': [
+      {
+        'label': 'Create RAML Project'
+        'command': 'raml-labs:newProject'
+      }
+      {
+        'label': 'Get APIs from ...'
+        'submenu': [
+          {
+            'label': 'Popular APIs ( Community )'
+            'command': 'raml-labs:popular-apis'
+          }
+         ]
+      }
+      { type: 'separator' }
+      {
+        'label': 'Open API Console'
+        'command': 'raml-labs:console'
+      }
+
+      {
+        'label': 'Open RAMLScript Tools'
+        'command': 'raml-labs:ramlscript-pallete'
+      }
+      {
+        'label': 'Show Quick Commands'
+        'command': 'raml-labs:quick-commands'
+      }
+      {
+        'label': 'Launch Web Editor'
+        'command': 'raml-labs:launchonweb'
+      }
+      { type: 'separator' }
+      {
+        'label': 'HTTP/HAR Tools'
+        submenu: [
+          {
+            'label': 'Validate RAML against HAR'
+            'command': 'raml-labs:analizeHAR'
+          }
+          {
+            'label': 'Infer RAML from HAR'
+            'command': 'raml-labs:ramlFromHar'
+          }
+          {
+            'label': 'Generate RAML Script from HAR'
+            'command': 'raml-labs:ramlscriptFromHar'
+          }
+        ]
+      }
+      {
+        'label': 'Show RAML Specification ...'
+        'command': 'raml-labs:microsite'
+      }
+      { type: 'separator' }
+      {
+        'label': 'Go To Definition'
+        'command': 'raml-labs:gotoDecl'
+      }
+      {
+        'label': 'Find usages'
+        'command': 'raml-labs:findUsages'
+      }
+    ]
+  }
+]

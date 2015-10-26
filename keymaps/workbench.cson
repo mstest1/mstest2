@@ -1,0 +1,7 @@
+'atom-workspace':
+  'ctrl-alt-o': 'raml-labs:gotoDecl'
+  'ctrl-g': 'raml-labs:findUsages'
+  'ctrl-alt-e':'raml-labs:quickFix'
+  'ctrl-o':'raml-labs:quickOutline'
+  'ctrl-q':'raml-labs:quick-commands'
+  
